@@ -1,0 +1,77 @@
+.post {
+  padding: 2%;
+  display: grid;
+  background: #7ac8ff75;
+  grid-template-areas:
+    "date date date date"
+    "img  img  img  img "
+    "title title title title"
+    "pbody pbody pbody pbody";
+  grid-gap: 0px;
+  font-family: roboto;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4, 0fr);
+  box-shadow: 0px 3px 5px 1px #00000047;
+}
+
+.post .date {grid-area: date;border-bottom: 1px solid;}
+
+.post .image {
+  grid-area: img;
+  max-width: 315px;
+  box-shadow: 0px 5px 8px 0px #00000040;
+}
+
+.post .image img {
+width: 100%;
+}
+
+.post .title {
+  grid-area: title;
+  /* text-decoration: none !important; */
+  font-family: sans-serif;
+}
+
+.post .title a{
+text-decoration-line: none;
+color: black;
+}
+
+.post .title a:hover{
+
+color: blue;
+}
+
+.post .body {
+  grid-area: pbody;
+}
+
+.post .body p {
+ font-family: roboto;
+ margin: 8px 0;
+}
+
+
+.wateroff-post {
+  display: grid;
+  grid-template-rows: repeat(5,0fr);
+  /* grid-template-columns: 0fr; */
+  /* grid-gap: 10px; */
+  background: #7ac8ffa6;
+  padding: 2%;
+  font-family: roboto;
+  box-shadow: 0px 5px 6px 1px #00000052;
+}
+
+.wateroff-post .city {
+text-align: center;
+border-bottom: 1px solid;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.wateroff-post summary {
+font-weight: 900;
+background: #7ac8ff;
+border: 1px solid #0000000d;
+}

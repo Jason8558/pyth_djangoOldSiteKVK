@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+      {% load static %}
+      <link id="main-style" rel="stylesheet" href="{% static 'css/style.css'%}">
+      <link id="lw" rel="stylesheet" href="#">
+      <link rel="stylesheet" href="{% static 'css/page.css'%}">
+      <link rel="stylesheet" href="{% static 'css/post.css'%}">
+      <link rel="stylesheet" href="{% static 'css/forms.css'%}">
+      {%block link%}{%endblock%}
+      <link rel="shortcut icon" href="{% static 'img/favicon.ico'%}" type="image/x-icon">
+      <script src="{% static 'js/lvplugin.js'%}"></script>
+
+    <meta charset="utf-8">
+    <title>{%block title%} Камчатский водоканал {% endblock %}</title>
+
+  </head>
+
+  <header>
+<div class="container">
+  <div class="header-grid">
+    <div class="branding">
+      <div class="logo-holder">
+        <a href="/blog"><img src="{% static 'img/logo2.png' %}" alt=""></a>
+      </div>
+
+        <p class="title">Краевое государственное унитарное предприятие</p>
+
+        <p class="stitle">камчатский водоканал</p>
+
+
+
+
+    </div>
+
+
+
+<div class="buttons-grid">
+  <div class="button header-button" id="lk">
+  <a href="">
+
+    <p>Личный кабинет</p>
+    </a>
+  </div>
+  <div class="button header-button" id="pay">
+  <a href="">
+
+    <p>Оплата онлайн</p>
+    </a>
+  </div>
+  <div class="button header-button" id="talk">
+  <a href="">
+
+    <p>Оставить обращение</p>
+    </a>
+  </div>
+
+</div>
+
+
+</div>
+<!--  -->
+
+
+
+
+  </header>
+
+  {% block content%}{%endblock%}

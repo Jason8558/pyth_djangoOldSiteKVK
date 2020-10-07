@@ -1,0 +1,11 @@
+.ank-maininfo {
+
+}
+
+.ank-block {
+  DISPLAY: GRID;
+  grid-template-columns: repeat(4, 1fr);
+  border: solid 1px #a9a9a9;
+  padding: 1%;
+  border-radius: 11px;
+}

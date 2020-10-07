@@ -1,0 +1,19 @@
+{%extends "blog/header.html" %}
+{% block title %}Информация для УК и собственников{% endblock %}
+
+{% block content%}
+{%load static%}
+
+
+<div class="container block ukinfo-content">
+  <div class="news-grid ukinfo-grid">
+{% for post in post %}
+<div class="post ukinfo">
+  <p class="date">{{post.date_pub}}</p>
+  <h4 class="title">{{post.title}}</h4>
+  <div class="body">{%autoescape off%}{{post.body}}{%endautoescape%}</div>
+</div>
+{%endfor%}
+</div>
+</div>
+{% endblock %}

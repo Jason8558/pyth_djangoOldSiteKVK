@@ -1,0 +1,121 @@
+{%extends "blog/header.html" %}
+{%load static%}
+{%block link%} <link rel="stylesheet" href="{% static 'css/anketa.css'%}"> {%endblock%}
+{% block title %}Информация для УК и собственников{% endblock %}
+
+{% block content%}
+{%load static%}
+<div class="container">
+<div class="block anketa-content">
+<form action="#" method="post">{% csrf_token %}
+<div class="ank-maininfo ank-block">
+  <div>
+    <label for="id_vacancy">На какую вакансию вы претендуете?</label>
+    <p>{{form.vacancy}}</p>
+    </div>
+    <div>
+    <label for="id_fio">Ваши Фамилия, Имя и Отчество: </label>
+    <p>{{form.fio}}</p>
+    </div>
+    <div>
+    <label for="id_date_of_birth">Дата рождения: </label>
+    <p>{{form.date_of_birth}}</p>
+    </div>
+    <div>
+    <label for="id_age">Возраст: </label>
+    <p>{{form.age}}</p>
+    </div>
+    <div>
+    <label for="id_registr">Адрес регистрации: </label>
+    <p>{{form.registr}}</p>
+    </div>
+    <div>
+    <label for="id_fact_liv">Адрес фактического проживания: </label>
+    <p>{{form.fact_live}}</p>
+    </div>
+    <div>
+    <label for="id_phone">Номер телефона: </label>
+    <p>{{form.phone}}</p>
+    </div>
+</div>
+
+<div class="ank-family ank-block">
+  <div>
+  <label for="id_martial_status">Семейное положение: </label>
+  <p>{{form.marital_status}}</p>
+  </div>
+  <div>
+  <label for="id_fio">Фамилия, Имя и Отчество супруга(ги): </label>
+  <p>{{form.fio_spouse}}</p>
+  </div>
+  <div>
+  <label for="id_date_of_birth">Дата рождения супруга(ги): </label>
+  <p>{{form.date_of_birth_spouse}}</p>
+</div>
+
+    <div class="kids">
+      <div>
+      <label for="id_kid_fio">ФИО ребенка: </label>
+      <p>{{form.kid_fio}}</p>
+      </div>
+      <div></div>
+      <label for="id_kid_date_of_birth">Дата рождения ребенка: </label>
+      <p>{{form.kid_date_of_birth}}</p>
+    </div>
+
+    <div class="kids1">
+      <!-- ggg -->
+      <label for="id_kid_fio1">ФИО ребенка: </label>
+      <p>{{form.kid_fio1}}</p>
+      <label for="id_kid_date_of_birth1">Дата рождения ребенка: </label>
+      <p>{{form.kid_date_of_birth1}}</p>
+    </div>
+    </div>
+
+<div class="education-container ank-block">
+    <div class="education">
+      <label for="id_educational_institution">Учебное заведение: </label>
+      <p>{{form.educational_institution}}</p>
+      <label for="id_facultity">Факультет: </label>
+      <p>{{form.facultity}}</p>
+      <h5>Период обучения: </h5>
+      <label for="id_educ_period_from">C: </label>
+      <p>{{form.educ_period_from}}</p>
+      <label for="id_educ_period_to">по: </label>
+      <p>{{form.educ_period_to}}</p>
+      <label for="id_educ_duration">Длительность </label>
+      <p>{{form.educ_duration}} лет</p>
+    </div>
+
+    <div class="education1">
+      <label for="id_educational_institution1">Учебное заведение: </label>
+      <p>{{form.educational_institution1}}</p>
+      <label for="id_facultity1">Факультет: </label>
+      <p>{{form.facultity1}}</p>
+      <h5>Период обучения: </h5>
+      <label for="id_educ_period_from1">C: </label>
+      <p>{{form.educ_period_from1}}</p>
+      <label for="id_educ_period_to1">по: </label>
+      <p>{{form.educ_period_to1}}</p>
+      <label for="id_educ_duration1">Длительность </label>
+      <p>{{form.educ_duration1}} лет</p>
+    </div>
+
+    <div class="educ_additional">
+      <label for="id_educ_additional">Дополнительное образование (курсы, стажировки): </label>
+      <p>{{form.educ_additional}}</p>
+      <label for="id_educ_self">Знания, приобретенные самостоятельно: </label>
+      <p>{{form.educ_self}}</p>
+      <label for="id_educ_want">Дополнительные навыки, которые желаете приобрести, каким образом этого добьетесь? Когда? </label>
+      <p>{{form.educ_want}}</p>
+
+
+    </div>
+</div>
+
+
+	<input class="button" type="submit" value="Отправить"/>
+</form>
+</div>
+</div>
+{% endblock %}

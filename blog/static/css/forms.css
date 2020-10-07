@@ -1,0 +1,18 @@
+input {
+  font-size: 1.5rem;
+  border-radius: 9px;
+  border-style: solid;
+  border: 1px solid #808080;
+  background: #7ac8ff;
+  padding: 5px;
+}
+
+form {
+  display: grid;
+  float: left;
+  width: 100%;
+}
+
+select {
+  
+}

@@ -1,0 +1,19 @@
+{%load static%}
+<div class="post">
+  <p class="date">{{post.date_pub}}</p>
+<div class="image">
+{% if post.image %}
+  <img src="{{post.image.url|safe}}" alt="">
+  {%else%}
+  <img src="{% static 'img/base_img.jpg'%}" alt="">
+  {% endif%}
+
+</div>
+<p class="title"><a href="{% url 'post_single_url' slug=post.slug %}">{{post.title}}</a></p>
+<div class="body">
+{%autoescape off%}{{post.body|truncatechars:550}}{%endautoescape%}
+
+</div>
+
+
+</div>

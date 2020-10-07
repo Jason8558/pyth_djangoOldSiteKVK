@@ -1,0 +1,26 @@
+{% extends "blog/header.html"%}
+{%block title%} Вакансии {% endblock %}
+{% block content %}
+<div class="container page-content">
+  <div class="page-grid nomenu">
+    <div class="block page-body ">
+      <h3>Вакансии</h3>
+      <div class="vacancy-grid">
+  <a href="anketa/" class="button">Анкета</a>
+{%for vac in vacancy %}
+<div class="vacancy">
+<h3>{{vac.title}}</h3>
+<h5>Требования:</h5>
+<p>Образование: {{vac.education}}<p>
+<p>{%autoescape off%}{{vac.requires}}{%endautoescape%}</p>
+<h5>Обязанности:</h5>
+<p>{%autoescape off%}{{vac.duties}}{%endautoescape%}</p>
+<a href="#" class="button anketa">Заполнить анкету</a>
+</div>
+{%endfor%}
+</div>
+<p>По всем возникающим вопросам обращаться в рабочее время в Службу управления персоналом по телефонам: <b>8 (4152) 218-615, 218-692</b></p>
+</div>
+</div>
+</div>
+{% endblock %}
