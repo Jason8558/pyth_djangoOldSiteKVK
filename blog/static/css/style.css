@@ -1,3 +1,5 @@
+*{font-family: roboto;
+}
 
 html {
   background-image: url('../img/background.jpg');
@@ -31,7 +33,7 @@ header {
   display: block;
   /* padding: 1%; */
   /* margin-bottom: 0%; */
-  height: 6rem;
+  /* height: 6rem; */
 }
 
 
@@ -667,13 +669,11 @@ font-size: 1.2rem;
 
 "news news numbers"
 "news news hvs"
-"news news hvs"
-"contacts contacts hvs"
 "contacts contacts hvs"
 "footer footer footer";
 
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(6, 1fr);
+grid-template-rows: repeat(4, 1fr);
 grid-gap: 17px;
 }
 
@@ -700,9 +700,9 @@ width: 52%;
 .ukinfo-content {display: flow-root;width: 35%;}
 
 .ukinfo-grid {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  float: none;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+float: none;
 }
 
 .zapys {
